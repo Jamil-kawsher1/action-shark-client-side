@@ -45,15 +45,20 @@ const Navigationbar = () => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                <ListItem>
-                    <LoginIcon></LoginIcon>
-                    Login
+                <ListItem >
+                    <LoginIcon></LoginIcon> <Link style={{ textDecoration: 'none', marginLeft: 3 }} to='/login'>Login
+                    </Link>
+
+
                 </ListItem>
                 <ListItem>
-                    <ShoppingBasketIcon></ShoppingBasketIcon>
-                    Explore Products
+                    <ShoppingBasketIcon></ShoppingBasketIcon><Link style={{ textDecoration: 'none', marginLeft: 3 }} to='/allProducts'>Explore Products
+                    </Link>
+
                 </ListItem>
                 <ListItem>
+
+
                     <DashboardIcon></DashboardIcon>
                     Dashboard
                 </ListItem>
@@ -68,7 +73,7 @@ const Navigationbar = () => {
             </List>
             <Divider />
             <List></List>
-        </Box>
+        </Box >
     );
     return (
         <div>
