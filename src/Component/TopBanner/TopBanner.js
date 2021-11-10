@@ -17,7 +17,7 @@ const TopBanner = () => {
 
     return (
         < >
-            <Swiper spaceBetween={10} centeredSlides={true} autoplay={{
+            <Swiper style={{ marginTop: 10 }} spaceBetween={10} centeredSlides={true} autoplay={{
                 "delay": 2000,
                 "disableOnInteraction": false
             }} pagination={{
