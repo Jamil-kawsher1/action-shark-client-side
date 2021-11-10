@@ -119,7 +119,7 @@ const Navigationbar = () => {
                             alignItems="flex-start"
                             spacing={2}>
                             <Grid sx={{ display: { xs: 'none', md: 'block', lg: 'block', sm: 'block' } }} item md={12}>
-                                {user.email ? <Button onClick={logOut} style={{ color: 'white' }}>{user.displayName} Logout</Button> : <Link to="/login" style={{ textDecoration: 'none', color: 'white' }}> Login</Link>}
+                                {user.email ? <div><span style={{ marginRight: 10 }}>{user.displayName}</span><Button variant="contained" onClick={logOut} style={{ color: 'white' }}> Logout</Button></div> : <Link to="/login" style={{ textDecoration: 'none', color: 'white' }}> Login</Link>}
 
 
                             </Grid>

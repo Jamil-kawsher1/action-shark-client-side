@@ -26,8 +26,14 @@ const Login = () => {
 
 
     const handleloginSubmit = e => {
+        console.log(loginData.email, loginData.password);
+        if (loginData.email == undefined) {
+            alert("Please Check Some Info");
+        }
+        else {
+            loginUser(loginData.email, loginData.password);
+        }
 
-        loginUser(loginData.email, loginData.password);
 
         e.preventDefault();
     }
@@ -43,8 +49,8 @@ const Login = () => {
                     </Container>}
                     <form onSubmit={handleloginSubmit}>
 
-                        <TextField type="email" name="email" onBlur={handleOnchange} sx={{ width: "75%", m: 1, }} label="Your Email" variant="standard" />
-                        <TextField name='password' onBlur={handleOnchange} sx={{ width: "75%", m: 1, }} type="password" label="Your Password" variant="standard" />
+                        <TextField required type="email" name="email" onBlur={handleOnchange} sx={{ width: "75%", m: 1, }} label="Your Email" variant="standard" />
+                        <TextField required name='password' onBlur={handleOnchange} sx={{ width: "75%", m: 1, }} type="password" label="Your Password" variant="standard" />
                         <Button type="submit" sx={{ width: "75%", m: 1, backgroundColor: 'green' }} variant="contained"><LoginIcon sx={{ mr: 1, }}></LoginIcon> Login</Button>
                         <Link style={{ textDecoration: 'none' }} to="/register"><Button variant="text">New user ?Please Register</Button></Link>
                     </form>
