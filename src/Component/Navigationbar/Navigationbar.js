@@ -19,12 +19,14 @@ import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Link } from 'react-router-dom';
 import { Grid } from '@mui/material';
+import useAuth from '../../Hooks/useAuth';
 
 
 const Navigationbar = () => {
     const [state, setState] = React.useState({
         left: false
     });
+    const { user, logOut } = useAuth({});
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (
@@ -45,12 +47,7 @@ const Navigationbar = () => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                <ListItem >
-                    <LoginIcon></LoginIcon> <Link style={{ textDecoration: 'none', marginLeft: 3 }} to='/login'>Login
-                    </Link>
 
-
-                </ListItem>
                 <ListItem>
                     <ShoppingBasketIcon></ShoppingBasketIcon><Link style={{ textDecoration: 'none', marginLeft: 3 }} to='/allProducts'>Explore Products
                     </Link>
@@ -62,14 +59,19 @@ const Navigationbar = () => {
                     <DashboardIcon></DashboardIcon>
                     Dashboard
                 </ListItem>
-                <ListItem>
-                    <PersonIcon></PersonIcon>
-                    Logen In As
-                </ListItem>
-                <ListItem>
-                    <LogoutIcon></LogoutIcon>
+                {user.email && <ListItem>
+                    <PersonIcon sx={{ mr: 1 }}></PersonIcon>
+                    {user.displayName}
+                </ListItem>}
+                {user.email ? <ListItem onClick={logOut}>
+                    <LogoutIcon sx={{ mr: 1 }}></LogoutIcon>
                     Logout
-                </ListItem>
+                </ListItem> : <ListItem >
+                    <LoginIcon></LoginIcon> <Link style={{ textDecoration: 'none', marginLeft: 3 }} to='/login'>Login
+                    </Link>
+
+
+                </ListItem>}
             </List>
             <Divider />
             <List></List>
@@ -117,8 +119,8 @@ const Navigationbar = () => {
                             alignItems="flex-start"
                             spacing={2}>
                             <Grid sx={{ display: { xs: 'none', md: 'block', lg: 'block', sm: 'block' } }} item md={12}>
-                                <Button style={{ color: 'white' }}>Login</Button>
-                                <Button style={{ color: "white" }}>Explore Product</Button>
+                                {user.email ? <Button onClick={logOut} style={{ color: 'white' }}>{user.displayName} Logout</Button> : <Link to="/login" style={{ textDecoration: 'none', color: 'white' }}> Login</Link>}
+
 
                             </Grid>
 
