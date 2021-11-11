@@ -8,6 +8,8 @@ import Products from './Component/Products/Products';
 import Footer from './Component/Footer/Footer';
 import AuthProvider from './Context/AuthProvder/AuthProvider';
 import Register from './Component/Register/Register';
+import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
+import Dashboard from './Component/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -37,6 +39,15 @@ function App() {
               <Register></Register>
               <Footer></Footer>
             </Route>
+            <Route path='/placeorder'>
+              <Navigationbar></Navigationbar>
+              <PlaceOrder></PlaceOrder>
+              <Footer></Footer>
+            </Route>
+            <Route path='/dashboard'>
+              <Dashboard></Dashboard>
+            </Route>
+
 
 
 

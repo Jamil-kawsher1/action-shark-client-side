@@ -56,8 +56,9 @@ const Navigationbar = () => {
                 <ListItem>
 
 
-                    <DashboardIcon></DashboardIcon>
-                    Dashboard
+                    <DashboardIcon></DashboardIcon><Link style={{ textDecoration: 'none', marginLeft: 3 }} to='/dashboard'>Dashboard
+                    </Link>
+
                 </ListItem>
                 {user.email && <ListItem>
                     <PersonIcon sx={{ mr: 1 }}></PersonIcon>
@@ -114,13 +115,10 @@ const Navigationbar = () => {
                         </IconButton>
                         <img src="https://i.ibb.co/xs2LQ9v/actionshark-removebg-preview.png" style={{ width: 250, height: 'auto' }} />
                         <Grid container
-                            direction="row"
-                            justifyContent="flex-end"
-                            alignItems="flex-start"
+
                             spacing={2}>
                             <Grid sx={{ display: { xs: 'none', md: 'block', lg: 'block', sm: 'block' } }} item md={12}>
-                                {user.email ? <div><span style={{ marginRight: 10 }}>{user.displayName}</span><Button variant="contained" onClick={logOut} style={{ color: 'white' }}> Logout</Button></div> : <Link to="/login" style={{ textDecoration: 'none', color: 'white' }}> Login</Link>}
-
+                                <div><Link to='/allproduts' style={{ textDecoration: 'none', color: 'white', margin: 10 }}>Explore Produts</Link> {user.email && <Link style={{ textDecoration: 'none', color: 'white', margin: 10 }} to='/dashboard' >Dashboard</Link>} {user.email && <span style={{ marginLeft: 200 }}>{user.displayName}</span>} {user.email && <Button onClick={logOut} variant="contained">Logout</Button>} {!user.email && < Link style={{ textDecoration: 'none', color: 'white' }} to='login'>Login</Link>} </div>
 
                             </Grid>
 
@@ -130,7 +128,7 @@ const Navigationbar = () => {
                 </AppBar>
             </Box>
 
-        </div>
+        </div >
     );
 };
 

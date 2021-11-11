@@ -2,12 +2,15 @@ import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid
 import React from 'react';
 
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import { Box, padding } from '@mui/system';
 const Product = (props) => {
     const { aname, price, description, img, rating } = props.camera;
+
+
     return (
 
-        <Grid item xs={12} md={4} sx={{ p: 3 }}>
-            <Card >
+        <Grid item xs={12} md={4} sx={{}} >
+            <Card style={{ marginBottom: 20 }}>
                 <CardMedia
                     component="img"
                     alt="green iguana"
@@ -22,7 +25,7 @@ const Product = (props) => {
                     <Typography variant="body2" color="text.secondary">
                         {description.slice(0, 80) + ".."}
                     </Typography>
-                    <Typography variant="h6" color="text.secondary">
+                    <Typography variant="h5" color="InfoText">
                         {price}
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
@@ -31,12 +34,15 @@ const Product = (props) => {
                     </Typography>
 
                 </CardContent>
-                <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
+                <CardActions style={{ paddingBottom: 10 }}>
+
+                    <Button style={{ margin: '0 auto', display: "flex", }} color='success' variant='contained' size="large">Buy Now</Button>
+
+
+
                 </CardActions>
             </Card>
-        </Grid>
+        </Grid >
 
 
     );
