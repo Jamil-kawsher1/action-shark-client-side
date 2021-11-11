@@ -18,6 +18,7 @@ function App() {
             <Route exact path='/'>
               <Navigationbar></Navigationbar>
               <TopBanner></TopBanner>
+              <Products></Products>
               <Footer></Footer>
             </Route>
             <Route path='/login'>
