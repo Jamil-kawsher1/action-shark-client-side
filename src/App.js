@@ -11,6 +11,7 @@ import Register from './Component/Register/Register';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import Dashboard from './Component/Dashboard/Dashboard';
 import ExploreProduct from './Component/ExploreProduct/ExploreProduct';
+import FAQ from './Component/FAQ/FAQ';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Navigationbar></Navigationbar>
               <TopBanner></TopBanner>
               <Products></Products>
+              <FAQ></FAQ>
               <Footer></Footer>
             </Route>
             <Route path='/login'>
@@ -40,7 +42,7 @@ function App() {
               <Register></Register>
               <Footer></Footer>
             </Route>
-            <Route path='/placeorder'>
+            <Route path='/placeorder/:id'>
               <Navigationbar></Navigationbar>
               <PlaceOrder></PlaceOrder>
               <Footer></Footer>

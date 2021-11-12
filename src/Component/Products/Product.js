@@ -3,8 +3,9 @@ import React from 'react';
 
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import { Box, padding } from '@mui/system';
+import { Link } from 'react-router-dom';
 const Product = (props) => {
-    const { aname, price, description, img, rating } = props.camera;
+    const { aname, price, description, img, rating, _id } = props.camera;
 
 
     return (
@@ -36,7 +37,8 @@ const Product = (props) => {
                 </CardContent>
                 <CardActions style={{ paddingBottom: 10 }}>
 
-                    <Button style={{ margin: '0 auto', display: "flex", }} color='success' variant='contained' size="large">Buy Now</Button>
+                    <Link style={{ margin: '0 auto', display: "flex", textDecoration: 'none' }} to={`/placeorder/${_id}`}><Button style={{ margin: '0 auto', display: "flex", }} color='success' variant='contained' size="large">Buy Now</Button></Link>
+
 
 
 

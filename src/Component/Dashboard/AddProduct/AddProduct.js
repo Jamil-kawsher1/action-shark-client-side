@@ -2,6 +2,7 @@ import { Alert, Button, Card, CardContent, CircularProgress, Container, Grid, Li
 import { Box } from '@mui/system';
 import axios from 'axios';
 import React, { useState } from 'react';
+import SendIcon from '@mui/icons-material/Send';
 import useAuth from '../../../Hooks/useAuth';
 
 const AddProduct = () => {
@@ -64,7 +65,7 @@ const AddProduct = () => {
                                     <TextField type="number" name="price" onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} label="Product Price" variant="standard" />
                                     <TextField name='img' onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} type="text" label="Product Img Url" variant="standard" />
                                     <TextField name='description' onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} type="text" label="Product Description" variant="standard" />
-                                    <Button type="submit" sx={{ width: "25%", m: 1, }} variant="contained">  Submit</Button>
+                                    <Button type="submit" sx={{ width: "25%", m: 1, }} variant="contained" endIcon={<SendIcon />}>  Submit</Button>
 
                                 </form>
 

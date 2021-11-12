@@ -36,6 +36,8 @@ import { useLocation, useHistory } from 'react-router-dom';
 import MakeAdmin from './MakeAdmin/MakeAdmin';
 import Payment from './Payment/Payment';
 import AddProduct from './AddProduct/AddProduct';
+import Myorders from '../MyOrders/Myorders';
+import ManageAllOrders from './ManageAllOrders/ManageAllOrders';
 const drawerWidth = 240;
 
 function Dashboard(props) {
@@ -175,6 +177,12 @@ function Dashboard(props) {
                     </Route>
                     <Route path={`${path}/AddProdut`}>
                         <AddProduct></AddProduct>
+                    </Route>
+                    <Route path={`${path}/myorder`}>
+                        <Myorders></Myorders>
+                    </Route>
+                    <Route path={`${path}/manageAllOrders`}>
+                        <ManageAllOrders></ManageAllOrders>
                     </Route>
                 </Switch>
 

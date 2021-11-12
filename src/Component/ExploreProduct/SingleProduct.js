@@ -1,8 +1,9 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, Rating, Typography } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleProduct = (props) => {
-    const { aname, price, description, img, rating } = props.camera;
+    const { aname, price, description, img, rating, _id } = props.camera;
 
     return (
 
@@ -33,7 +34,7 @@ const SingleProduct = (props) => {
                 </CardContent>
                 <CardActions style={{ paddingBottom: 10 }}>
 
-                    <Button style={{ margin: '0 auto', display: "flex", }} color='success' variant='contained' size="large">Buy Now</Button>
+                    <Link style={{ margin: '0 auto', display: "flex", textDecoration: 'none' }} to={`/placeorder/${_id}`}><Button style={{ margin: '0 auto', display: "flex", }} color='success' variant='contained' size="large">Buy Now</Button></Link>
 
 
 
