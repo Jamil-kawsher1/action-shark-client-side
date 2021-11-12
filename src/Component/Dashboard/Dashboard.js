@@ -34,6 +34,8 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import useAuth from '../../Hooks/useAuth';
 import { useLocation, useHistory } from 'react-router-dom';
 import MakeAdmin from './MakeAdmin/MakeAdmin';
+import Payment from './Payment/Payment';
+import AddProduct from './AddProduct/AddProduct';
 const drawerWidth = 240;
 
 function Dashboard(props) {
@@ -168,9 +170,12 @@ function Dashboard(props) {
                     <Route path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
                     </Route>
-                    {/* <Route path={`${path}/addDoctor`}>
-                        <AddDoctor></AddDoctor>
-                    </Route> */}
+                    <Route path={`${path}/pay`}>
+                        <Payment></Payment>
+                    </Route>
+                    <Route path={`${path}/AddProdut`}>
+                        <AddProduct></AddProduct>
+                    </Route>
                 </Switch>
 
             </Box>

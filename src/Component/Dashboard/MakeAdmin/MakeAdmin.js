@@ -8,27 +8,31 @@ import { useState } from 'react';
 const MakeAdmin = () => {
     const [email, setEmail] = useState('');
     const handleOnBlur = e => {
-        // console.log(e.target.value);
+        console.log(e.target.value);
         setEmail(e.target.value);
+
     }
     const handleOnSubmit = e => {
 
         const user = { email }
-
+        e.target.value = '';
         axios.put("http://localhost:5000/users/admin", user)
             .then(res => {
-                console.log(res);
+                if (res.data.modifiedCount > 0) {
+                    alert("Operation successfull");
+                }
+                else {
+                    alert('Sorry Something Went wrong');
+                }
             });
+        e.target.email.value = "";
         e.preventDefault()
     }
     return (
         <div>
             <h3> Make  an Admin</h3>
 
-            {/* <form onSubmit={handleOnSubmit}>
-                <TextField onBlur={handleOnBlur} type="email" label="Email" variant="standard" />
-                <Button type='submit' variant="contained">Make Admin</Button>
-            </form> */}
+
 
 
             <Box sx={{ flexGrow: 1 }}>
@@ -38,7 +42,7 @@ const MakeAdmin = () => {
                     </Grid>
                     <Grid item xs={12} md={12}>
                         <form onSubmit={handleOnSubmit}>
-                            <TextField color='success' style={{ width: '60%' }} onBlur={handleOnBlur} type="email" label="Email" variant="standard" />
+                            <TextField color='success' style={{ width: '60%' }} onBlur={handleOnBlur} type="email" label="Email" name='email' variant="standard" />
                             <Box sx={{ m: 2 }}><Button type='submit' variant="contained">Make Admin</Button></Box>
                         </form>
                     </Grid>

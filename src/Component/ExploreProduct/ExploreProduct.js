@@ -1,10 +1,8 @@
 import { CircularProgress, Container, Grid } from '@mui/material';
-import React, { useEffect, useState, } from 'react';
-import Product from './Product';
+import React, { useEffect, useState } from 'react';
+import SingleProduct from './SingleProduct';
 
-
-
-const Products = () => {
+const ExploreProduct = () => {
     const [cproducts, setCproducts] = useState([])
 
     useEffect(() => {
@@ -14,16 +12,14 @@ const Products = () => {
 
     }, [])
 
-    // console.log(cproducts);
     return (
-
 
         <div>
             {cproducts.length < 1 && <CircularProgress />}
 
             <Container maxWidth="lg">
-                <Grid container spacing={2}>
-                    {cproducts.slice(0, 3).map(camera => <Product camera={camera} key={camera._id}></Product>)}
+                <Grid container spacing={2} style={{ marginTop: 20 }}>
+                    {cproducts.map(camera => <SingleProduct camera={camera} key={camera._id}></SingleProduct>)}
                 </Grid>
             </Container>
 
@@ -34,4 +30,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default ExploreProduct;

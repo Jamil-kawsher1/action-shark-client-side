@@ -10,6 +10,7 @@ import AuthProvider from './Context/AuthProvder/AuthProvider';
 import Register from './Component/Register/Register';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import Dashboard from './Component/Dashboard/Dashboard';
+import ExploreProduct from './Component/ExploreProduct/ExploreProduct';
 
 function App() {
   return (
@@ -46,6 +47,11 @@ function App() {
             </Route>
             <Route path='/dashboard'>
               <Dashboard></Dashboard>
+            </Route>
+            <Route path='/allproduts'>
+              <Navigationbar></Navigationbar>
+              <ExploreProduct></ExploreProduct>
+              <Footer></Footer>
             </Route>
 
 
