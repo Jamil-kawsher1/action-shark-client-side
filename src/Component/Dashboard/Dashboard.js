@@ -38,13 +38,15 @@ import Payment from './Payment/Payment';
 import AddProduct from './AddProduct/AddProduct';
 import Myorders from '../MyOrders/Myorders';
 import ManageAllOrders from './ManageAllOrders/ManageAllOrders';
+import ReviewForm from '../Review/ReviewForm';
+import AdminRoute from '../AdminRoute/AdminRoute';
 const drawerWidth = 240;
 
 function Dashboard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
-    const { user, logOut } = useAuth();
+    const { user, logOut, admin } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const redirect_url = location?.state?.from || '/';
@@ -71,21 +73,31 @@ function Dashboard(props) {
 
                 <Link style={{ textDecoration: 'none', textAlign: 'start' }} to="/"><Button style={{ color: 'black', }}> <HomeIcon /> <span style={{ marginLeft: 2 }}>Home</span></Button></Link>
                 <br />
-                <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/pay`}><Button style={{ color: 'black', }}> <AttachMoneyIcon /> <span style={{ marginLeft: 2 }}>Payments</span></Button></Link>
-                <br />
-                <Link style={{ textDecoration: 'none', }} to={`${url}/myorder`}><Button style={{ color: 'black', }}> <ShopTwoIcon /> <span style={{ marginLeft: 2 }}>My Orders</span></Button></Link>
-                <br />
-                <Link style={{ textDecoration: 'none', }} to={`${url}/orderreview`}><Button style={{ color: 'black', }}> <RateReviewIcon /> <span style={{ marginLeft: 2 }}>Review</span></Button></Link>
-                <br />
+                {!admin &&
+                    < Box >
 
-                <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/makeAdmin`}><Button style={{ color: 'black', }}>< AdminPanelSettingsIcon ></AdminPanelSettingsIcon> <span style={{ marginLeft: 2 }}>Make Admin</span></Button></Link>
-                <br />
-                <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/manageAllOrders`}><Button style={{ color: 'black', }}><ManageAccountsIcon></ManageAccountsIcon> <span style={{ marginLeft: 2 }}>Manage Orders</span></Button></Link>
-                <br />
-                <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/AddProdut`}><Button style={{ color: 'black', }}><AddCircleIcon></AddCircleIcon> <span style={{ marginLeft: 2 }}>Add Product</span></Button></Link>
-                <br />
-                <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/ManageProduts`}><Button style={{ color: 'black', }}><ManageSearchIcon /> <span style={{ marginLeft: 2 }}>Manage Product</span></Button></Link>
-                <br />
+                        <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/pay`}><Button style={{ color: 'black', }}> <AttachMoneyIcon /> <span style={{ marginLeft: 2 }}>Payments</span></Button></Link>
+                        <br />
+                        <Link style={{ textDecoration: 'none', }} to={`${url}/myorder`}><Button style={{ color: 'black', }}> <ShopTwoIcon /> <span style={{ marginLeft: 2 }}>My Orders</span></Button></Link>
+                        <br />
+                        <Link style={{ textDecoration: 'none', }} to={`${url}/orderreview`}><Button style={{ color: 'black', }}> <RateReviewIcon /> <span style={{ marginLeft: 2 }}>Review</span></Button></Link>
+                        <br />
+
+                    </Box>
+                }
+                {admin && <Box >
+
+                    <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/makeAdmin`}><Button style={{ color: 'black', }}>< AdminPanelSettingsIcon ></AdminPanelSettingsIcon> <span style={{ marginLeft: 2 }}>Make Admin</span></Button></Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/manageAllOrders`}><Button style={{ color: 'black', }}><ManageAccountsIcon></ManageAccountsIcon> <span style={{ marginLeft: 2 }}>Manage Orders</span></Button></Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/AddProdut`}><Button style={{ color: 'black', }}><AddCircleIcon></AddCircleIcon> <span style={{ marginLeft: 2 }}>Add Product</span></Button></Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', textAlign: 'start' }} to={`${url}/ManageProduts`}><Button style={{ color: 'black', }}><ManageSearchIcon /> <span style={{ marginLeft: 2 }}>Manage Product</span></Button></Link>
+
+                </Box>}
+
+
                 <Link style={{ textDecoration: 'none', textAlign: 'start' }} to="#"><Button style={{ color: 'black', }}><AccountCircle></AccountCircle><span style={{ marginLeft: 2 }}>{user.displayName}</span></Button></Link>
                 <br />
                 <Link style={{ textDecoration: 'none', }} to='#'><Button onClick={handleLogout} style={{ color: 'black', }}> <ExitToAppIcon /> <span style={{ marginLeft: 2 }}>Logout</span></Button></Link>
@@ -169,20 +181,23 @@ function Dashboard(props) {
                     {/* <Route exact path={path}>
                         <DashBoardHome></DashBoardHome>
                     </Route> */}
-                    <Route path={`${path}/makeAdmin`}>
+                    <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
-                    </Route>
+                    </AdminRoute>
                     <Route path={`${path}/pay`}>
                         <Payment></Payment>
                     </Route>
-                    <Route path={`${path}/AddProdut`}>
+                    <AdminRoute path={`${path}/AddProdut`}>
                         <AddProduct></AddProduct>
-                    </Route>
+                    </AdminRoute>
                     <Route path={`${path}/myorder`}>
                         <Myorders></Myorders>
                     </Route>
-                    <Route path={`${path}/manageAllOrders`}>
+                    <AdminRoute path={`${path}/manageAllOrders`}>
                         <ManageAllOrders></ManageAllOrders>
+                    </AdminRoute>
+                    <Route path={`${path}/orderreview`}>
+                        <ReviewForm></ReviewForm>
                     </Route>
                 </Switch>
 

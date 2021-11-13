@@ -79,7 +79,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Yes We provide 10 days money back guarantee.
+                        DYes We provide 10 days money back guarantee.
                     </Typography>
                 </AccordionDetails>
             </Accordion>

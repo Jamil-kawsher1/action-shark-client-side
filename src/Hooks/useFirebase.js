@@ -9,6 +9,7 @@ import firebaseIntializeAuthentication from '../Firebase/Firebase.init';
 //intialize firebase and authentication
 firebaseIntializeAuthentication();
 const useFirebase = () => {
+    const [admin, setAdmin] = useState(false);
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('');
@@ -130,6 +131,13 @@ const useFirebase = () => {
             .then(res => console.log(res));
     }
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
+
+
 
 
     return {
@@ -139,6 +147,7 @@ const useFirebase = () => {
         loginUser,
         isLoading,
         error,
+        admin,
         signInWithGoogle,
 
     }

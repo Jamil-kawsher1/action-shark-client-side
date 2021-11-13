@@ -12,6 +12,9 @@ import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import Dashboard from './Component/Dashboard/Dashboard';
 import ExploreProduct from './Component/ExploreProduct/ExploreProduct';
 import FAQ from './Component/FAQ/FAQ';
+import Review from './Component/Review/Review';
+import ReviewForm from './Component/Review/ReviewForm';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
               <TopBanner></TopBanner>
               <Products></Products>
               <FAQ></FAQ>
+              <Review></Review>
+
               <Footer></Footer>
             </Route>
             <Route path='/login'>
@@ -42,14 +47,15 @@ function App() {
               <Register></Register>
               <Footer></Footer>
             </Route>
-            <Route path='/placeorder/:id'>
+
+            <PrivateRoute path='/placeorder/:id'>
               <Navigationbar></Navigationbar>
               <PlaceOrder></PlaceOrder>
               <Footer></Footer>
-            </Route>
-            <Route path='/dashboard'>
+            </PrivateRoute>
+            <PrivateRoute path='/dashboard'>
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
             <Route path='/allproduts'>
               <Navigationbar></Navigationbar>
               <ExploreProduct></ExploreProduct>
