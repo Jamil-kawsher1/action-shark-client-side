@@ -49,7 +49,7 @@ const Navigationbar = () => {
             <List>
 
                 <ListItem>
-                    <ShoppingBasketIcon></ShoppingBasketIcon><Link style={{ textDecoration: 'none', marginLeft: 3 }} to='/allProducts'>Explore Products
+                    <ShoppingBasketIcon></ShoppingBasketIcon><Link to='/allproduts' style={{ textDecoration: 'none', marginLeft: 3 }}>Explore Products
                     </Link>
 
                 </ListItem>
@@ -113,7 +113,7 @@ const Navigationbar = () => {
                             }
 
                         </IconButton>
-                        <img src="https://i.ibb.co/xs2LQ9v/actionshark-removebg-preview.png" style={{ width: 250, height: 'auto' }} />
+                        <Link to='/' style={{ textDecoration: 'none' }}>  <img src="https://i.ibb.co/xs2LQ9v/actionshark-removebg-preview.png" style={{ width: 250, height: 'auto' }} /></Link>
                         <Grid container
 
                             spacing={2}>

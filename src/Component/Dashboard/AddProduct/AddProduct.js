@@ -66,7 +66,7 @@ const AddProduct = () => {
                                     <TextField type="number" name="rating" onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} label="Product Rating" variant="standard" />
                                     <TextField name='img' onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} type="text" label="Product Img Url" variant="standard" />
                                     <TextField name='description' onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} type="text" label="Product Description" variant="standard" />
-                                    <Button type="submit" sx={{ width: "25%", m: 1, }} variant="contained" endIcon={<SendIcon />}>  Submit</Button>
+                                    <Button type="submit" sx={{ width: "40%", m: 1, }} variant="contained" endIcon={<SendIcon />}>  Submit</Button>
 
                                 </form>
 
