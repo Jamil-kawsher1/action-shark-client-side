@@ -42,6 +42,7 @@ import ReviewForm from '../Review/ReviewForm';
 import AdminRoute from '../AdminRoute/AdminRoute';
 import ManageProducts from './ManageProducts/ManageProducts';
 import NotFound from '../NotFound/NotFound';
+import DashbaordHome from './DashboardHome/DashbaordHome';
 const drawerWidth = 240;
 
 function Dashboard(props) {
@@ -180,9 +181,9 @@ function Dashboard(props) {
             >
                 <Toolbar />
                 <Switch>
-                    {/* <Route exact path={path}>
-                        <MakeAdmin></MakeAdmin>
-                    </Route> */}
+                    <Route exact path={path}>
+                        <DashbaordHome></DashbaordHome>
+                    </Route>
                     <AdminRoute path={`${path}/makeAdmin`}>
                         <MakeAdmin></MakeAdmin>
                     </AdminRoute>
@@ -203,6 +204,9 @@ function Dashboard(props) {
                     </AdminRoute>
                     <Route path={`${path}/orderreview`}>
                         <ReviewForm></ReviewForm>
+                    </Route>
+                    <Route path={`${path}/*`}>
+                        <NotFound></NotFound>
                     </Route>
 
                 </Switch>
