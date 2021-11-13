@@ -8,11 +8,11 @@ const Products = () => {
     const [cproducts, setCproducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://evening-bayou-52199.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setCproducts(data));
 
-    }, [])
+    }, [cproducts])
 
     // console.log(cproducts);
     return (
@@ -21,9 +21,9 @@ const Products = () => {
         <div>
             {cproducts.length < 1 && <CircularProgress />}
 
-            <Container maxWidth="lg">
+            <Container >
                 <Grid container spacing={2}>
-                    {cproducts.slice(0, 3).map(camera => <Product camera={camera} key={camera._id}></Product>)}
+                    {cproducts.slice(0, 6).map(camera => <Product camera={camera} key={camera._id}></Product>)}
                 </Grid>
             </Container>
 

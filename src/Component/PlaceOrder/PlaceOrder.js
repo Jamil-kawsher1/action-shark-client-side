@@ -13,7 +13,7 @@ const PlaceOrder = () => {
     const { isLoading, user, error } = useAuth();
     const { id } = useParams();
     const [singleService, setSingleService] = useState([]);
-    const url = `http://localhost:5000/products/${id}`
+    const url = `https://evening-bayou-52199.herokuapp.com/products/${id}`
     useEffect(() => {
 
         fetch(url)
@@ -53,7 +53,7 @@ const PlaceOrder = () => {
         const userOrderData = { ...productData, ...userData };
         console.log(userOrderData);
 
-        axios.post('http://localhost:5000/placeorder', userOrderData)
+        axios.post('https://evening-bayou-52199.herokuapp.com/placeorder', userOrderData)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Order Placed SuccessFully");

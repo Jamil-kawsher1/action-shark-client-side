@@ -22,7 +22,7 @@ const AddProduct = () => {
 
 
     const handleProductdataSubmit = e => {
-        axios.post('http://localhost:5000/products', productData)
+        axios.post('https://evening-bayou-52199.herokuapp.com/products', productData)
             .then(res => {
                 if (res.data.insertedId) {
 
@@ -63,6 +63,7 @@ const AddProduct = () => {
 
                                     <TextField type="text" name="aname" onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} label="Product Name" variant="standard" />
                                     <TextField type="number" name="price" onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} label="Product Price" variant="standard" />
+                                    <TextField type="number" name="rating" onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} label="Product Rating" variant="standard" />
                                     <TextField name='img' onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} type="text" label="Product Img Url" variant="standard" />
                                     <TextField name='description' onBlur={handleOnBlur} sx={{ width: "75%", m: 1, }} type="text" label="Product Description" variant="standard" />
                                     <Button type="submit" sx={{ width: "25%", m: 1, }} variant="contained" endIcon={<SendIcon />}>  Submit</Button>

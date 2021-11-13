@@ -24,7 +24,7 @@ const SingleProduct = (props) => {
                         {description.slice(0, 80) + ".."}
                     </Typography>
                     <Typography variant="h5" color="InfoText">
-                        {price}
+                        {price} $
                     </Typography>
                     <Typography variant="h6" color="text.secondary">
                         <Rating name="read-only" value={rating} readOnly />

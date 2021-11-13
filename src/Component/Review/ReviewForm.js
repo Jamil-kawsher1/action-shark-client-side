@@ -11,15 +11,7 @@ const ReviewForm = () => {
     const [value, setValue] = React.useState(1);
     const [reviewData, setReviewData] = useState({});
     const { isLoading, user, error } = useAuth();
-    // const { id } = useParams();
-    // const [singleService, setSingleService] = useState([]);
-    // const url = `http://localhost:5000/products/${id}`
-    // useEffect(() => {
 
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => setSingleService(data))
-    // }, [])
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -42,7 +34,7 @@ const ReviewForm = () => {
 
 
 
-        axios.post('http://localhost:5000/reviews', reviewDataFinal)
+        axios.post('https://evening-bayou-52199.herokuapp.com/reviews', reviewDataFinal)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Review Sumitted SuccessFully");

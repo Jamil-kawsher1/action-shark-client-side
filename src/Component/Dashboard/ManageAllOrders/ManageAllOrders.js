@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
     const [allorder, setAllorder] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allorders')
+        fetch('https://evening-bayou-52199.herokuapp.com/allorders')
             .then(res => res.json())
             .then(data => setAllorder(data))
     }, [allorder])
@@ -16,7 +16,7 @@ const ManageAllOrders = () => {
     const handleCancel = id => {
         const del = window.confirm("Are You Sure you Want to Delete?");
         if (del) {
-            const url = `http://localhost:5000/deleteorder/${id}`;
+            const url = `https://evening-bayou-52199.herokuapp.com/deleteorder/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -30,7 +30,7 @@ const ManageAllOrders = () => {
     }
 
     const handleconfirm = id => {
-        const url = `http://localhost:5000/orderstatus/${id}`
+        const url = `https://evening-bayou-52199.herokuapp.com/orderstatus/${id}`
         axios.put(url,)
             .then(response => console.log(response));
     }

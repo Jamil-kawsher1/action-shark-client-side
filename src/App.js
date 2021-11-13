@@ -15,6 +15,7 @@ import FAQ from './Component/FAQ/FAQ';
 import Review from './Component/Review/Review';
 import ReviewForm from './Component/Review/ReviewForm';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import NotFound from './Component/NotFound/NotFound';
 
 function App() {
   return (
@@ -26,9 +27,8 @@ function App() {
               <Navigationbar></Navigationbar>
               <TopBanner></TopBanner>
               <Products></Products>
-              <FAQ></FAQ>
               <Review></Review>
-
+              <FAQ></FAQ>
               <Footer></Footer>
             </Route>
             <Route path='/login'>
@@ -60,6 +60,10 @@ function App() {
               <Navigationbar></Navigationbar>
               <ExploreProduct></ExploreProduct>
               <Footer></Footer>
+            </Route>
+
+            <Route path='*'>
+              <NotFound></NotFound>
             </Route>
 
 

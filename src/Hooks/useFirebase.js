@@ -121,18 +121,18 @@ const useFirebase = () => {
     }
     const saveUser = (email, displayName,) => {
         const user = { email, displayName };
-        axios.post('http://localhost:5000/users', user)
+        axios.post('https://evening-bayou-52199.herokuapp.com/users', user)
             .then(res => console.log(res))
 
     }
     const updateUserdata = (email, displayName) => {
         const user = { email, displayName };
-        axios.put("http://localhost:5000/users", user)
+        axios.put("https://evening-bayou-52199.herokuapp.com/users", user)
             .then(res => console.log(res));
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://evening-bayou-52199.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])

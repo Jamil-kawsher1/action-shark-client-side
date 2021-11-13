@@ -17,7 +17,7 @@ const Review = () => {
     SwiperCore.use([Autoplay, Pagination, Navigation]);
     const [allreviews, setAllReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://evening-bayou-52199.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setAllReviews(data));
     }, [allreviews])
