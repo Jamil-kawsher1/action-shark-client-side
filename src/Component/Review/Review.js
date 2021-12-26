@@ -26,7 +26,7 @@ const Review = () => {
         < >
 
             <h3>Reviews</h3>
-            <Swiper slidesPerView={3} spaceBetween={10} autoplay={{
+            <Swiper slidesPerView={2} spaceBetween={10} autoplay={{
                 "delay": 2000,
                 "disableOnInteraction": false
             }} pagination={{
