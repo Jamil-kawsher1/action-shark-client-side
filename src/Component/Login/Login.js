@@ -40,7 +40,7 @@ const Login = () => {
     }
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
+            <Grid style={{ height: '100vh' }} container spacing={2}>
                 <Grid item sx={{ mt: 'auto', mb: 'auto' }} xs={12} md={6}>
                     <Typography variant="body1" gutterBottom>Login</Typography>
                     {user.email && <Container sx={{ display: 'flex' }}><Alert sx={{ ml: 'auto', mr: 'auto' }} severity="success">Login Succesfull!!!
@@ -59,7 +59,7 @@ const Login = () => {
                     <Button onClick={signInWithGoogle} sx={{ width: "75%", m: 1, backgroundColor: " #ba000d", }} variant="contained"><GoogleIcon sx={{ mr: 1 }}></GoogleIcon> Google Sigin In</Button>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <img style={{ width: "80%" }} src={loginPhoto} alt=""></img>
+                    <img style={{ width: "80%", height: 'auto' }} src={loginPhoto} alt=""></img>
                 </Grid>
 
             </Grid>
