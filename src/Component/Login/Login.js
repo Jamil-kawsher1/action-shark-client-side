@@ -5,6 +5,7 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import GoogleIcon from '@mui/icons-material/Google';
 import LoginIcon from '@mui/icons-material/Login';
+import loginPhoto from '../img/loginP.png'
 const Login = () => {
     const location = useLocation();
     const history = useHistory();
@@ -58,7 +59,7 @@ const Login = () => {
                     <Button onClick={signInWithGoogle} sx={{ width: "75%", m: 1, backgroundColor: " #ba000d", }} variant="contained"><GoogleIcon sx={{ mr: 1 }}></GoogleIcon> Google Sigin In</Button>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <img style={{ width: "80%" }} src='https://i.ibb.co/3Y5h01N/login-ai.png' alt=""></img>
+                    <img style={{ width: "80%" }} src={loginPhoto} alt=""></img>
                 </Grid>
 
             </Grid>
