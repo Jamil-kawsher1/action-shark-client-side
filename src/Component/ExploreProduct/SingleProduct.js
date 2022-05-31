@@ -21,7 +21,7 @@ const SingleProduct = (props) => {
                         {aname}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        {description.slice(0, 80) + ".."}
+                        {description.slice(0.50)}
                     </Typography>
                     <Typography variant="h5" color="InfoText">
                         {price} $

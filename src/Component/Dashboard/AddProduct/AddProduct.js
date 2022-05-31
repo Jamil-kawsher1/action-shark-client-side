@@ -9,10 +9,14 @@ const AddProduct = () => {
     const [productData, setProductdata] = useState({});
 
     const { isLoading, user, error } = useAuth();
-
+    const [length, setLength] = useState(0);
     const handleOnBlur = e => {
         const field = e.target.name;
+
+
         const value = e.target.value;
+
+
         // console.log(field, value);
         const newProductData = { ...productData };
         newProductData[field] = value;
@@ -22,20 +26,30 @@ const AddProduct = () => {
 
 
     const handleProductdataSubmit = e => {
-        axios.post('https://evening-bayou-52199.herokuapp.com/products', productData)
-            .then(res => {
-                if (res.data.insertedId) {
+        //temporary error handiling for empty filed value
+        console.log(Object.values(productData));
+        if (Object.keys(productData).length < 5) {
+            alert("Please Fill up all the field");
+        } else if (Object.values(productData).includes('') || Object.values(productData).includes(undefined)) {
+            alert("Invalid Input Type please Check");
+        }
+        else {
+            axios.post('https://evening-bayou-52199.herokuapp.com/products', productData)
+                .then(res => {
+                    if (res.data.insertedId) {
 
-                    alert("Added Successfully!!!");
+                        alert("Added Successfully!!!");
 
-                }
-                e.target.aname.value = "";
-                e.target.price.value = "";
-                e.target.img.value = "";
-                e.target.description.value = "";
+                    }
+                    e.target.aname.value = "";
+                    e.target.price.value = "";
+                    e.target.img.value = "";
+                    e.target.description.value = "";
 
 
-            })
+                })
+        }
+
 
 
         e.preventDefault();
