@@ -9,7 +9,7 @@ const AddProduct = () => {
     const [productData, setProductdata] = useState({});
 
     const { isLoading, user, error } = useAuth();
-    const [length, setLength] = useState(0);
+
     const handleOnBlur = e => {
         const field = e.target.name;
 
