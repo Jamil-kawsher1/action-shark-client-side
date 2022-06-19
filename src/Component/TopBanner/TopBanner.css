@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    padding-top: 50px;
+    background-color: #EBEAE9;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 480px;
+    height: 480px;
+    background-color: deepskyblue;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.camera-img {
+    transition: .2s all ease-in-out;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.camera-img {
+    transform: rotate(-25deg);
+    display: flex;
+    justify-items: flex-start;
+}
+
+.camera-img:hover {
+    animation-fill-mode: forwards;
+    transform: rotate(10deg);
+
+}
+
+.camera-img img {
+
+    max-width: 105%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.inner-div {
+    display: flex;
+    padding-top: 50px;
+    justify-content: start;
+    padding-right: 40px;
+
+}
+
+.inner-div-2 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-banner {
+    transition: .3s all ease-out;
+    margin-top: 20px;
+    padding: 20px 30px;
+}
+
+.btn-banner:hover {
+
+
+    transform: scale(90%);
+    background-color: black;
+    color: white;
+
+}
+
+
+html {
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.main-2nd-hading-small-dev {
+
+    font-size: 65px;
+}
+
+/* media Quires */
+
+@media only screen and (max-width: 890px) {
+
+    /* <h2 className='' style={{ fontSize: '65px', fontWeight: '600', }}>Ready To Spoil <br /> Every Moment</h2> */
+    .main-2nd-hading-small-dev {
+
+        font-size: 50px;
+
+    }
+
+}

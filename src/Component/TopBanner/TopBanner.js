@@ -1,6 +1,8 @@
 import React from 'react';
 import { Swiper, SwiperSlide, navigation } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
+import './TopBanner.css';
+import mainbanner from '../img/professional-digital-lens-.png'
 // swiper core styles
 import 'swiper/swiper.min.css';
 import SwiperCore, {
@@ -11,36 +13,44 @@ import SwiperCore, {
 // modules styles
 import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
+import { Grid } from '@mui/material';
 
 
 const TopBanner = () => {
-    SwiperCore.use([Autoplay, Pagination, Navigation]);
+
 
     return (
         < >
-            <Swiper style={{ marginTop: 10 }} spaceBetween={10} centeredSlides={true} autoplay={{
-                "delay": 2000,
-                "disableOnInteraction": false
-            }} pagination={{
-                "clickable": true
-            }} navigation={true} className="mySwiper">
-                <SwiperSlide>
+            <Grid className='main-container' container spacing={5}>
+                <Grid className='' item xs={12} md={6}>
+
+                    <div style={{ fontFamily: 'Bai Jamjuree,sans-serif', textAlign: 'justify' }} className="inner-div-2">
+                        <div style={{}}>
 
 
+                            <h2 style={{ fontSize: '14px', fontWeight: '400', textTransform: 'uppercase', letterSpacing: '3px' }}>Shop To Get What You Love</h2>
+
+                            <h2 className='main-2nd-hading-small-dev' style={{ fontWeight: '600', }}>Ready To Spoil <br /> Every Moment</h2>
+                            <p className='p-small-dev' style={{ fontSize: '16px', fontFamily: 'Montserrat,sans-serif', fontWeight: 'bolder' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utelit tellus <br /> luctus nec ullamcorper mattis pulvinar ipsum dolor.</p>
+                            <button style={{ letterSpacing: '2px', textTransform: 'uppercase' }} className='btn-banner'>Get Started</button>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <div className="inner-div">
 
 
+                        <div className='circle'>
+                            <div className="camera-img">
 
+                                <img src={mainbanner} alt="" />
+                            </div>
+                        </div>
 
+                    </div>
+                </Grid>
 
-
-                </SwiperSlide>
-
-                <SwiperSlide><img src="https://i.ibb.co/bNn4TTM/b1.png" style={{ width: '100%' }} /></SwiperSlide>
-                {/* <SwiperSlide><img src="https://i.ibb.co/DgRg3cT/b2.png" style={{ width: '100%' }} /></SwiperSlide>
-                <SwiperSlide><img src="https://i.ibb.co/BVCLzK1/b3.png" style={{ width: '100%' }} /></SwiperSlide> */}
-
-
-            </Swiper>
+            </Grid>
         </>
     );
 };
