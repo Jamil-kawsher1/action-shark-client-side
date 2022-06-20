@@ -1,50 +1,39 @@
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Rating, Typography } from '@mui/material';
 import React from 'react';
+import './product.css'
+import camera from '../img/digital-slr-camera-PZ5QY9V.png'
+import { Grid, Rating, Typography } from '@mui/material';
 
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import { Box, padding } from '@mui/system';
-import { Link } from 'react-router-dom';
+
+
 const Product = (props) => {
-    const { aname, price, description, img, rating, _id } = props.camera;
+    // const { aname, price, description, img, rating, _id } = props.sp;
 
 
     return (
 
-        <Grid item xs={12} md={4} sx={{}} >
-            <Card style={{ marginBottom: 20 }}>
-                <CardMedia
-                    component="img"
-                    alt="green iguana"
-                    height="218"
-                    width='345'
-                    image={img}
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {aname}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {description.slice(0, 80) + ".."}
-                    </Typography>
-                    <Typography variant="h5" color="InfoText">
-                        {price} $
-                    </Typography>
+        <Grid item xs={12} md={4}>
+            <div className='container'>
+                <div className="outer-card">
+
+
+                    <div className="card">
+
+                        <img className='img-class' src={camera} alt="" />
+
+
+                    </div>
+
+                    <h3 style={{ margin: '3px' }}>{"yfeferh"}</h3>
+                    <h4 style={{ margin: '3px', color: '#807878', fontWeight: 'bolder' }}>$350</h4>
                     <Typography variant="h6" color="text.secondary">
-                        <Rating name="read-only" value={rating} readOnly />
+                        <Rating name="read-only" value={3} readOnly />
 
                     </Typography>
+                    <div><button className='card-btn'>Buy Now</button></div>
+                </div>
 
-                </CardContent>
-                <CardActions style={{ paddingBottom: 10 }}>
-
-                    <Link style={{ margin: '0 auto', display: "flex", textDecoration: 'none' }} to={`/placeorder/${_id}`}><Button style={{ margin: '0 auto', display: "flex", }} color='success' variant='contained' size="large">Buy Now</Button></Link>
-
-
-
-
-                </CardActions>
-            </Card>
-        </Grid >
+            </div>
+        </Grid>
 
 
     );

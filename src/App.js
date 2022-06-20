@@ -16,6 +16,7 @@ import Review from './Component/Review/Review';
 import ReviewForm from './Component/Review/ReviewForm';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import NotFound from './Component/NotFound/NotFound';
+import ProductCard from './Component/ProductCard/ProductCard';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Navigationbar></Navigationbar>
               <TopBanner></TopBanner>
               <Products></Products>
+
               <Review></Review>
               <FAQ></FAQ>
               <Footer></Footer>

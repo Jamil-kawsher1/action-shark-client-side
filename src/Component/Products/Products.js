@@ -1,5 +1,6 @@
 import { CircularProgress, Container, Grid } from '@mui/material';
 import React, { useEffect, useState, } from 'react';
+import ProductCard from '../ProductCard/ProductCard';
 import Product from './Product';
 
 
@@ -12,7 +13,7 @@ const Products = () => {
             .then(res => res.json())
             .then(data => setCproducts(data));
 
-    }, [cproducts])
+    }, [])
 
     // console.log(cproducts);
     return (
@@ -22,15 +23,26 @@ const Products = () => {
             {cproducts.length < 1 && <CircularProgress />}
 
             <Container >
-                <Grid container spacing={2}>
+                {/* <Grid container spacing={2}>
                     {cproducts.slice(0, 6).map(camera => <Product camera={camera} key={camera._id}></Product>)}
+                </Grid> */}
+
+                <Grid container spacing={2}>
+                    {cproducts.map(sp => {
+                        const { aname, price, description, img, rating, _id } = sp;
+                        return <ProductCard name={aname} price={price} img={img} rating={rating} id={_id} key={_id}></ProductCard>
+                    }
+
+
+                    )}
+
                 </Grid>
             </Container>
 
 
 
 
-        </div>
+        </div >
     );
 };
 
