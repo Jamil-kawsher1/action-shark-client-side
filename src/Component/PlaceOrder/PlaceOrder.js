@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { useParams } from 'react-router';
+import placeorderimg from "../img/placeorder.png"
 import axios from 'axios';
 
 
@@ -96,7 +97,7 @@ const PlaceOrder = () => {
 
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <img style={{ width: "100%" }} src='https://i.ibb.co/WPrvQVk/Place-your-curbside-pickup-order-online-abstract-concept-vector-illustration-Safe-grocery-pick-up-qu.jpg' alt=""></img>
+                    <img style={{ width: "100%" }} src={placeorderimg} alt=""></img>
                 </Grid>
 
             </Grid>
