@@ -6,7 +6,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Login from './Component/Login/Login';
 import Products from './Component/Products/Products';
 import Footer from './Component/Footer/Footer';
-import AuthProvider from './Context/AuthProvder/AuthProvider';
+import AuthProvider, { AuthContext } from './Context/AuthProvder/AuthProvider';
 import Register from './Component/Register/Register';
 import PlaceOrder from './Component/PlaceOrder/PlaceOrder';
 import Dashboard from './Component/Dashboard/Dashboard';
@@ -17,6 +17,8 @@ import ReviewForm from './Component/Review/ReviewForm';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import NotFound from './Component/NotFound/NotFound';
 import ProductCard from './Component/ProductCard/ProductCard';
+import SubMockupParent from './Component/SubMockUp/SubMockupParent';
+import Testimonial from './Component/Review/Testimonial';
 
 function App() {
   return (
@@ -27,9 +29,10 @@ function App() {
             <Route exact path='/'>
               <Navigationbar></Navigationbar>
               <TopBanner></TopBanner>
+              <SubMockupParent></SubMockupParent>
               <Products></Products>
-
-              <Review></Review>
+              <Testimonial />
+              {/* <Review></Review> */}
               <FAQ></FAQ>
               <Footer></Footer>
             </Route>

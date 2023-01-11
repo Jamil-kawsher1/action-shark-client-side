@@ -9,7 +9,7 @@ const ProductCard = ({ name, price, img, rating, id }) => {
     // const { aname, price, description, img, rating, _id } = props.camera;
     // const { aname, price, img, rating, _id } = props.camera;
     return (
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6} lg={4}>
             <div className='container'>
                 <div className="outer-card">
 

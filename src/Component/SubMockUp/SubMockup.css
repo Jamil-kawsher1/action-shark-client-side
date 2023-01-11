@@ -1,0 +1,590 @@
+.mockupbox {
+    position: relative;
+
+    width: 350px;
+
+    height: 350px;
+    background-color: #EBEAE9;
+    z-index: 4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mockup {
+
+    position: absolute;
+    border-bottom-color: transparent;
+    width: 290px;
+    height: 200px;
+    top: 150px;
+    left: -10;
+    clip-path: circle(51.3% at 19% 74%);
+
+
+
+    /* border-radius: 200px 200px 0 0; */
+    overflow-y: hidden;
+
+    background-color: yellow;
+    z-index: 10;
+}
+
+.mockupbox {
+    position: relative;
+}
+
+.img1 {
+
+
+
+
+    width: 150px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 11;
+}
+
+
+.text-box {
+    font-size: 30px;
+    position: absolute;
+
+    right: 22%;
+    top: 23%;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading1 {
+    font-size: 15px;
+    text-align: end;
+    color: #787878;
+    letter-spacing: 4px;
+}
+
+.heading3 {
+    /* display: flex;
+ 
+    justify-self: end; */
+    text-align: end;
+    /* font-size: 15px; */
+}
+
+.mockupbox-1 {
+    position: relative;
+}
+
+
+
+/* 2nd mockup */
+
+
+.mockupbox-2 {
+    position: relative;
+
+    width: 350px;
+    height: 350px;
+    background-color: #EBEAE9;
+    z-index: 4;
+}
+
+
+
+.mockup-2 {
+
+    position: absolute;
+    border-bottom-color: transparent;
+    width: 300px;
+    height: 300px;
+    left: 14%;
+    clip-path: circle(61.5% at 90% 0);
+
+
+
+
+
+
+
+    /* border-radius: 200px 200px 0 0; */
+    overflow-y: hidden;
+
+    background-color: #EA4C88;
+    z-index: 10;
+}
+
+.img2 {
+
+
+
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    left: 115px;
+    bottom: 0;
+    z-index: 11;
+
+}
+
+.mockupbox-2 {
+    position: relative;
+}
+
+.text-box-2 {
+    /* font-size: 30px;
+    position: absolute;
+    right: 22%;
+    top: 23%;
+    display: flex;
+    flex-direction: column; */
+}
+
+.heading1-b1 {
+    font-size: 15px;
+
+    color: #787878;
+    letter-spacing: 4px;
+}
+
+.heading3-b3 {
+    /* display: flex;
+ 
+    justify-self: end; */
+    /* text-align: end; */
+    /* font-size: 15px; */
+}
+
+.mockupbox-2 {
+    position: relative;
+}
+
+.innertext-2 {
+    position: absolute;
+    top: 65%;
+    left: 7%;
+    font-size: 25px;
+    display: flex;
+    line-height: 35px;
+
+    text-align: justify;
+    flex-direction: column;
+
+}
+
+/* mocup box-3 */
+
+.mockupbox-3 {
+    position: relative;
+
+    width: 350px;
+    height: 350px;
+    background-color: #EBEAE9;
+    z-index: 4;
+}
+
+
+
+.mockup-3 {
+
+    position: absolute;
+    border-bottom-color: transparent;
+    width: 280px;
+    height: 280px;
+    top: 19.5%;
+    left: 9.5%;
+    clip-path: circle(50% at 50% 91%);
+
+
+
+
+
+
+    /* border-radius: 200px 200px 0 0; */
+    overflow-y: hidden;
+
+    background-color: #AB69C6;
+    z-index: 10;
+}
+
+.mockupbox-3 {
+    position: relative;
+}
+
+.img3 {
+
+
+
+    /* hfdhfdhhd */
+
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 42.5%;
+    left: 19.5%;
+    bottom: 0;
+    z-index: 11;
+}
+
+.text-box-3 {
+    padding-top: 10px;
+    /* font-size: 30px;
+    position: absolute;
+    right: 22%;
+    top: 23%;
+    display: flex;
+    flex-direction: column; */
+}
+
+.heading1-b1 {
+    font-size: 15px;
+
+    color: #787878;
+    letter-spacing: 4px;
+}
+
+.heading2-b3 {
+    font-size: 30px;
+}
+
+.heading3-b3 {
+    font-size: 30px;
+    /* display: flex;
+ 
+    justify-self: end; */
+    /* text-align: end; */
+    /* font-size: 15px; */
+}
+
+.mockupbox-2 {
+    position: relative;
+}
+
+.innertext-3 {
+    position: absolute;
+    top: 65%;
+    left: 7%;
+    font-size: 25px;
+    display: flex;
+    line-height: 35px;
+
+    text-align: justify;
+    flex-direction: column;
+
+}
+
+.mockup-grid {
+    /* padding-left: 35px; */
+
+    width: 100%;
+    display: grid;
+    place-items: center;
+    row-gap: 20px;
+    /* grid-template-columns: auto-fill, minmax(250px, 1fr); */
+}
+
+
+
+
+
+@media only screen and (min-width:720px) and (max-width:1200px) {
+
+
+    .mockup-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1220px) {
+
+    .mockupbox {
+        position: relative;
+
+        width: 400px;
+
+        height: 555px;
+        background-color: #EBEAE9;
+        z-index: 4;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mockup {
+
+        position: absolute;
+        border-bottom-color: transparent;
+        width: 350px;
+        height: 300px;
+        top: 255px;
+        left: -10;
+        clip-path: circle(51.3% at 19% 74%);
+
+
+
+        /* border-radius: 200px 200px 0 0; */
+        overflow-y: hidden;
+
+        background-color: yellow;
+        z-index: 10;
+    }
+
+    .mockupbox {
+        position: relative;
+    }
+
+    .img1 {
+
+
+
+
+        width: 150px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 11;
+    }
+
+
+    .text-box {
+        font-size: 30px;
+        position: absolute;
+
+        right: 22%;
+        top: 23%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading1 {
+        font-size: 15px;
+        text-align: end;
+        color: #787878;
+        letter-spacing: 4px;
+    }
+
+    .heading3 {
+        /* display: flex;
+     
+        justify-self: end; */
+        text-align: end;
+        /* font-size: 15px; */
+    }
+
+    .mockupbox-1 {
+        position: relative;
+    }
+
+
+
+    /* 2nd mockup */
+
+
+    .mockupbox-2 {
+        position: relative;
+
+        width: 400px;
+        height: 555px;
+        background-color: #EBEAE9;
+        z-index: 4;
+    }
+
+
+
+    .mockup-2 {
+
+        position: absolute;
+        border-bottom-color: transparent;
+        width: 350px;
+        height: 200px;
+        /* right: 30px; */
+        left: 12.5%;
+        clip-path: circle(61.5% at 90% 0);
+
+
+
+
+
+
+
+        /* border-radius: 200px 200px 0 0; */
+        overflow-y: hidden;
+
+        background-color: #EA4C88;
+        z-index: 10;
+    }
+
+    .img2 {
+
+
+
+        width: 250px;
+        position: absolute;
+        top: 50px;
+        /* left: px; */
+        bottom: 0;
+        z-index: 11;
+
+    }
+
+    .mockupbox-2 {
+        position: relative;
+    }
+
+    .text-box-2 {
+        /* font-size: 30px;
+        position: absolute;
+        right: 22%;
+        top: 23%;
+        display: flex;
+        flex-direction: column; */
+    }
+
+    .heading1-b1 {
+        font-size: 15px;
+
+        color: #787878;
+        letter-spacing: 4px;
+    }
+
+    .heading3-b3 {
+        /* display: flex;
+     
+        justify-self: end; */
+        /* text-align: end; */
+        /* font-size: 15px; */
+    }
+
+    .mockupbox-2 {
+        position: relative;
+    }
+
+    .innertext-2 {
+        position: absolute;
+        top: 65%;
+        left: 7%;
+        font-size: 25px;
+        display: flex;
+        line-height: 35px;
+
+        text-align: justify;
+        flex-direction: column;
+
+    }
+
+    /* mocup box-3 */
+
+    .mockupbox-3 {
+        position: relative;
+
+        width: 400px;
+        height: 555px;
+        background-color: #EBEAE9;
+        z-index: 4;
+    }
+
+
+
+    .mockup-3 {
+
+        position: absolute;
+        border-bottom-color: transparent;
+        width: 320px;
+        height: 320px;
+        top: 42%;
+        left: 11.5%;
+
+
+        clip-path: circle(50% at 50% 91%);
+
+
+
+
+
+
+        /* border-radius: 200px 200px 0 0; */
+        overflow-y: hidden;
+
+        background-color: #AB69C6;
+        z-index: 10;
+    }
+
+    .mockupbox-3 {
+        position: relative;
+    }
+
+    .img3 {
+
+
+
+
+
+        width: 250px;
+        height: 300px;
+        position: absolute;
+        top: 45.5%;
+        left: 21%;
+        bottom: 0;
+        z-index: 11;
+    }
+
+    .text-box-3 {
+        padding-top: 10px;
+        /* font-size: 30px;
+        position: absolute;
+        right: 22%;
+        top: 23%;
+        display: flex;
+        flex-direction: column; */
+    }
+
+    .heading1-b1 {
+        font-size: 15px;
+
+        color: #787878;
+        letter-spacing: 4px;
+    }
+
+    .heading2-b3 {
+        font-size: 30px;
+    }
+
+    .heading3-b3 {
+        font-size: 30px;
+        /* display: flex;
+     
+        justify-self: end; */
+        /* text-align: end; */
+        /* font-size: 15px; */
+    }
+
+    .mockupbox-2 {
+        position: relative;
+    }
+
+    .innertext-3 {
+        position: absolute;
+        top: 65%;
+        left: 7%;
+        font-size: 25px;
+        display: flex;
+        line-height: 35px;
+
+        text-align: justify;
+        flex-direction: column;
+
+    }
+
+
+
+    .mockup-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+
+@media only screen and (min-width: 2300px) {}

@@ -1,0 +1,88 @@
+.main-container-testimonial {
+
+    background-image: url('../../Component/img/quote.svg');
+    background-repeat: no-repeat;
+    width: 90%;
+    margin: 100px auto 10px auto;
+    background-position: right top;
+    /* height: 514px; */
+    background-size: 192px 100px;
+}
+
+.testimonial-box-container {
+
+
+    margin-top: 120px;
+    margin-bottom: 220px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.testimonial-box {
+    padding: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 375px;
+    height: 275px;
+    display: grid;
+    place-content: center;
+}
+
+.img-person {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img-circle {
+    width: 75px;
+
+    height: 75px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid #19D3AE;
+}
+
+@media only screen and (max-width:600px) {
+    .testimonial-box-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-box {
+
+
+
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+
+
+
+
+
+}
+
+@media only screen and (min-width:601px) and (max-width:1219px) {
+    .testimonial-box-container {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-box {
+
+
+
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+
+
+
+
+
+}

@@ -24,7 +24,7 @@ const TopBanner = () => {
             <Grid className='main-container' container spacing={5}>
                 <Grid className='' item xs={12} md={6}>
 
-                    <div style={{ fontFamily: 'Bai Jamjuree,sans-serif', textAlign: 'justify' }} className="inner-div-2">
+                    <div style={{ fontFamily: 'Bai Jamjuree,sans-serif', textAlign: 'justify', padding: '10px' }} className="inner-div-2">
                         <div style={{}}>
 
 
@@ -32,7 +32,7 @@ const TopBanner = () => {
 
                             <h2 className='main-2nd-hading-small-dev' style={{ fontWeight: '600', }}>Ready To Spoil <br /> Every Moment</h2>
                             <p className='p-small-dev' style={{ fontSize: '16px', fontFamily: 'Montserrat,sans-serif', fontWeight: 'bolder' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utelit tellus <br /> luctus nec ullamcorper mattis pulvinar ipsum dolor.</p>
-                            <button style={{ letterSpacing: '2px', textTransform: 'uppercase' }} className='btn-banner'>Get Started</button>
+                            <button style={{ letterSpacing: '2px', textTransform: 'uppercase', }} className='btn-banner'>Get Started</button>
                         </div>
                     </div>
                 </Grid>

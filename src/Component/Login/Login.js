@@ -39,8 +39,8 @@ const Login = () => {
         e.preventDefault();
     }
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <Grid style={{ height: '100vh' }} container spacing={2}>
+        <Box sx={{ flexGrow: 1, }}>
+            <Grid style={{}} container spacing={2}>
                 <Grid item sx={{ mt: 'auto', mb: 'auto' }} xs={12} md={6}>
                     <Typography variant="body1" gutterBottom>Login</Typography>
                     {user.email && <Container sx={{ display: 'flex' }}><Alert sx={{ ml: 'auto', mr: 'auto' }} severity="success">Login Succesfull!!!
@@ -53,13 +53,13 @@ const Login = () => {
                         <TextField required type="email" name="email" onBlur={handleOnchange} sx={{ width: "75%", m: 1, }} label="Your Email" variant="standard" />
                         <TextField required name='password' onBlur={handleOnchange} sx={{ width: "75%", m: 1, }} type="password" label="Your Password" variant="standard" />
                         <Button type="submit" sx={{ width: "75%", m: 1, backgroundColor: 'green' }} variant="contained"><LoginIcon sx={{ mr: 1, }}></LoginIcon> Login</Button>
-                        <Link style={{ textDecoration: 'none' }} to="/register"><Button variant="text">New user ?Please Register</Button></Link>
+                        <Link style={{ textDecoration: 'none', display: 'block' }} to="/register"><Button variant="text">New user ?Please Register</Button></Link>
                     </form>
                     <p>Social Login</p>
                     <Button onClick={signInWithGoogle} sx={{ width: "75%", m: 1, backgroundColor: " #ba000d", }} variant="contained"><GoogleIcon sx={{ mr: 1 }}></GoogleIcon> Google Sigin In</Button>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <img style={{ width: "80%", height: 'auto' }} src={loginPhoto} alt=""></img>
+                    <img style={{ width: "80%", height: '80vh' }} src={loginPhoto} alt=""></img>
                 </Grid>
 
             </Grid>

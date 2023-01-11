@@ -1,0 +1,12 @@
+@media screen and (min-width: 600px) and (max-width:833px) {
+
+
+
+    .box {
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        color: red;
+    }
+}

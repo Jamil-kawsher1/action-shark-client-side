@@ -20,6 +20,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { Link } from 'react-router-dom';
 import { Grid } from '@mui/material';
 import useAuth from '../../Hooks/useAuth';
+import './navigationbar.css'
 
 
 const Navigationbar = () => {
@@ -82,7 +83,7 @@ const Navigationbar = () => {
         <div>
 
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
+                <AppBar position="static ">
                     <Toolbar style={{ backgroundColor: 'black', padding: 10, textAlign: 'end' }}>
                         <IconButton
                             size="large"
